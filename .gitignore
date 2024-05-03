@@ -1,0 +1,22 @@
+# Ignore Python compiled files and directories
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore all .cfg files if they contain sensitive information
+*.cfg
+
+# Exclude virtual environment directories
+Lib/
+Scripts/
+
+# Exclude specific configuration directories if not needed
+# etc/
+
+# Exclude shared resources if not needed
+# share/
+
