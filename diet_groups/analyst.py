@@ -16,8 +16,8 @@ st.title("Visualising the environmental impacts of different diet groups in the 
 
 #### Data definition and loading 
 # Load the data
-file_path_1 = 'Results_21Mar2022.csv'  # normalised calorie intake
-file_path_2 = 'Results_21MAR2022_nokcaladjust.csv' # non-normalised calorie intake
+file_path_1 = 'diet_groups/Results_21Mar2022.csv'  # normalised calorie intake
+file_path_2 = 'diet_groups/Results_21MAR2022_nokcaladjust.csv' # non-normalised calorie intake
 
 # Define the columns to read
 columns_to_read = ['mc_run_id', 'grouping', 'mean_ghgs', 'mean_land', 'mean_watscar', 'mean_eut', 'mean_ghgs_ch4',
@@ -126,13 +126,13 @@ st.divider()
 # esimated disaggregated_ghgs
 
 # detect the encoding of the file
-with open('disaggregated_ghgs.csv', 'rb') as file:
+with open('diet_groups/disaggregated_ghgs.csv', 'rb') as file:
     raw_data = file.read()
     encoding = chardet.detect(raw_data)['encoding']
 
 # Load the data with the detected encoding
 map_cols_to_read = ["Country_Count", "Total GHG Emis (kg CO2 eq)"]
-map_df = pd.read_csv('disaggregated_ghgs.csv', usecols=map_cols_to_read, encoding=encoding)
+map_df = pd.read_csv('diet_groups/disaggregated_ghgs.csv', usecols=map_cols_to_read, encoding=encoding)
 
 # convert country name to iso code
 def get_iso_code(country):
