@@ -2,11 +2,6 @@
 __pycache__/
 *.py[cod]
 
-# Ignore virtual environment directories
-venv/
-env/
-.venv/
-
 # Ignore all .cfg files if they contain sensitive information
 *.cfg
 
