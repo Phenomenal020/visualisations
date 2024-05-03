@@ -10,8 +10,8 @@ Lib/
 Scripts/
 
 # Exclude specific configuration directories if not needed
-# etc/
+etc/
 
 # Exclude shared resources if not needed
-# share/
+share/
 
